@@ -27,11 +27,13 @@ u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 u1project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 u1project\main.o: ../Core/Inc/adc.h
+u1project\main.o: ../Core/Inc/spi.h
 u1project\main.o: ../Core/Inc/usart.h
 u1project\main.o: ../USB_DEVICE/App/usb_device.h
 u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
@@ -40,3 +42,12 @@ u1project\main.o: D:\Develop\Keil_MDK\ARM\ARMCC\Bin\..\include\stdio.h
 u1project\main.o: D:\Develop\Keil_MDK\ARM\ARMCC\Bin\..\include\stdlib.h
 u1project\main.o: D:\Develop\Keil_MDK\ARM\ARMCC\Bin\..\include\string.h
 u1project\main.o: ../Core/Inc/gpio.h
+u1project\main.o: ../USB_DEVICE/App/usbd_cdc_if.h
+u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+u1project\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+u1project\main.o: D:\Develop\Keil_MDK\ARM\ARMCC\Bin\..\include\stdarg.h
+u1project\main.o: ../Core/Inc/gd25q128.h
+u1project\main.o: ../Core/Inc/bsp_uart.h

@@ -19,13 +19,18 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "spi.h"
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usbd_cdc_if.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include "gd25q128.h"
+#include "bsp_uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +62,15 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void USB_printf(const char *format, ...)
+{
+    uint8_t tx_buf[128]; 
+    va_list args;
+    va_start(args, format);
+    uint16_t len = vsnprintf((char *)tx_buf, sizeof(tx_buf), format, args);
+    va_end(args);
+    CDC_Transmit_FS(tx_buf, len);
+}
 
 /* USER CODE END 0 */
 
@@ -92,14 +106,22 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_ADC1_Init();
   MX_USART2_UART_Init();
+  MX_SPI1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	HAL_Delay(2000); // 延时等待电脑枚举出 USB COM 口
+  USB_printf("\r\n=================================\r\n");
+  USB_printf("  U1 Jig System is Ready! \r\n");
+  USB_printf("  Task 1: USB VCP Test OK! \r\n");
+  USB_printf("=================================\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		USB_printf("U1 Heartbeat: tick...\r\n");
+    HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
